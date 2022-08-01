@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/weatherSearchFragment">
+
+    <fragment
+        android:id="@+id/weatherSearchFragment"
+        android:name="com.example.lowescodingchallenge.view.fragments.WeatherSearchFragment"
+        android:label="weather_search_fragment"
+        tools:layout="@layout/weather_search_fragment">
+        <action
+            android:id="@+id/goToList"
+            app:destination="@id/weatherListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherListFragment"
+        android:name="com.example.lowescodingchallenge.view.fragments.WeatherListFragment"
+        android:label="weather_list_fragment"
+        tools:layout="@layout/weather_list_fragment">
+        <action
+            android:id="@+id/goToDetail"
+            app:destination="@id/weatherDetailFragment" />
+        <argument
+            android:name="weatherContainerList"
+            app:argType="com.example.lowescodingchallenge.model.WeatherContainer[]"/>
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailFragment"
+        android:name="com.example.lowescodingchallenge.view.fragments.WeatherDetailFragment"
+        android:label="weather_detail_fragment"
+        tools:layout="@layout/weather_detail_fragment">
+        <argument
+            android:name="weatherContainer"
+            app:argType="com.example.lowescodingchallenge.model.WeatherContainer"/>
+    </fragment>
+
+</navigation>

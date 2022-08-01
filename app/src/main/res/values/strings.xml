@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lowe\'sCodingChallenge</string>
+    <string name="search_hint">Enter City Name</string>
+    <string name="lookup">Lookup</string>
+    <string name="args_temp">Temp: %s</string>
+    <string name="na">N/A</string>
+</resources>
